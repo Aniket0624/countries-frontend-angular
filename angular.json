@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "countries-using-angular"
+    }
+  },
+  "defaultProject": "countries-using-angular",
+  "cli": {
+    "analytics": "26491750-b526-47ed-9777-37103e17fa30"
+  }
 }

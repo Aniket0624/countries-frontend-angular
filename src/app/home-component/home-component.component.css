@@ -1,0 +1,21 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: hsl(207, 26%, 17%);
+}
+
+.home-header-bar {
+  display: flex;
+  /* width: 100%; */
+  justify-content: space-between;
+  padding: 1.5em 7em;
+  background-color: hsl(209, 23%, 22%);
+  color: white;
+}
+
+.btn-dark-mode {
+  background: transparent;
+  border: none;
+  color: white;
+}
