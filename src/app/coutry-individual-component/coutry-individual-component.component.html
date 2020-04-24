@@ -1,0 +1,27 @@
+<div class="country-body">
+  <button routerLink="/" class="back-button">Back</button>
+  <div class="country-details">
+    <img class="card-img" style="width : 500px; height : 350px; border-radius: 0.2em;"
+      src={{specificCountryDetails.flag}} alt="Card image cap" />
+    <div class="country-document">
+      <h4 style="font-size: 2.5em;"> {{specificCountryDetails.name}}</h4>
+      <div class="basic-details">
+        <li class="detail">Native Name: {{specificCountryDetails.nativeName}}</li>
+        <li class="detail">Top Level Domain : {{specificCountryDetails.topLevelDomain}}</li>
+        <li class="detail">Populations : {{specificCountryDetails.population}}</li>
+        <li class="detail" *ngFor="let courency of specificCountryDetails.currencies">
+          Currencies : {{courency.code}}
+        </li>
+        <li class="detail">Region : {{specificCountryDetails.region}}</li>
+        <li class="detail" *ngFor="let language of specificCountryDetails.languages">
+          Languages : {{language.name}}
+        </li>
+        <li class="detail">Sub Region : {{specificCountryDetails.subregion}}</li>
+        <li class="detail">Capital : {{specificCountryDetails.capital}}</li>
+      </div>
+      <div class="border-countries">
+
+      </div>
+    </div>
+  </div>
+</div>

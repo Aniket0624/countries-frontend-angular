@@ -9,7 +9,7 @@ import { HomePageServiceService } from 'src/app/home-page-service.service';
 export class HomePageBodyComponent implements OnInit {
   public allCountryDetails: [];
   constructor(private _HomePageServiceService: HomePageServiceService) { }
-
+  searchText;
   ngOnInit() {
     this.displayAllCountries();
   }
@@ -17,7 +17,7 @@ export class HomePageBodyComponent implements OnInit {
   displayAllCountries() {
     this._HomePageServiceService.getAllCountriesDetails().subscribe((response: any) => {
       this.allCountryDetails = response;
-      console.log(response);
+      // console.log(response);
     })
   }
 }

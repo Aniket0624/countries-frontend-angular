@@ -4,18 +4,25 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
-import { HomePageBodyComponent } from '../app/home-component/home-page-body/home-page-body.component';
+import { HomePageBodyComponent } from './home-page-body/home-page-body.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormsModule } from '@angular/forms';
+import { CoutryIndividualComponentComponent } from './coutry-individual-component/coutry-individual-component.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponentComponent,
-    HomePageBodyComponent
+    HomePageBodyComponent,
+    CoutryIndividualComponentComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    Ng2SearchPipeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
