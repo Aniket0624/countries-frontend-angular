@@ -24,7 +24,8 @@
 
           <li class="detail">
             Currencies :
-            <p class="xx" *ngFor="let courency of specificCountryDetails.currencies">{{courency.code}}</p>
+            <p class="xx" *ngFor="let courency of specificCountryDetails.currencies index as indexOfelement;">
+              {{indexOfelement != 0 ? ", "+ courency.code : courency.code}}</p>
           </li>
 
           <li class="detail">
