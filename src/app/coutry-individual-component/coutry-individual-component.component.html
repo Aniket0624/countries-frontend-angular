@@ -2,26 +2,45 @@
   <button routerLink="/" class="back-button">Back</button>
   <div class="country-details">
     <img class="card-img" style="width : 500px; height : 350px; border-radius: 0.2em;"
-      src={{specificCountryDetails.flag}} alt="Card image cap" />
+      src={{specificCountryDetails.flag}} alt="Country Flag" />
     <div class="country-document">
       <h4 style="font-size: 2.5em;"> {{specificCountryDetails.name}}</h4>
       <div class="basic-details">
-        <li class="detail">Native Name: {{specificCountryDetails.nativeName}}</li>
-        <li class="detail">Top Level Domain : {{specificCountryDetails.topLevelDomain}}</li>
-        <li class="detail">Populations : {{specificCountryDetails.population}}</li>
-        <li class="detail" *ngFor="let courency of specificCountryDetails.currencies">
-          Currencies : {{courency.code}}
-        </li>
-        <li class="detail">Region : {{specificCountryDetails.region}}</li>
-        <li class="detail" *ngFor="let language of specificCountryDetails.languages">
-          Languages : {{language.name}}
-        </li>
-        <li class="detail">Sub Region : {{specificCountryDetails.subregion}}</li>
-        <li class="detail">Capital : {{specificCountryDetails.capital}}</li>
+        <div class="first-column">
+          <li class="detail">Native Name: <p class="xx">{{specificCountryDetails.nativeName}}</p>
+          </li>
+          <li class="detail">Populations : <p class="xx">{{specificCountryDetails.population}}</p>
+          </li>
+          <li class="detail">Region : <p class="xx">{{specificCountryDetails.region}}</p>
+          </li>
+          <li class="detail">Sub Region : <p class="xx">{{specificCountryDetails.subregion}}</p>
+          </li>
+          <li class="detail">Capital : <p class="xx">{{specificCountryDetails.capital}}</p>
+          </li>
+        </div>
+        <div class="second-column">
+          <li class="detail">Top Level Domain : <p class="xx">{{specificCountryDetails.topLevelDomain}}</p>
+          </li>
+
+          <li class="detail">
+            Currencies :
+            <p class="xx" *ngFor="let courency of specificCountryDetails.currencies">{{courency.code}}</p>
+          </li>
+
+          <li class="detail">
+            Languages :
+            <p class="xx" *ngFor="let language of specificCountryDetails.languages index as indexOfelement;">
+              {{indexOfelement != 0 ? ", "+language.name : language.name}}</p>
+          </li>
+        </div>
       </div>
       <div class="border-countries">
-
+        <h4>Border Countries :</h4>
+        <button class="countries" *ngFor="let border of specificCountryDetails.borders">
+          {{border}}
+        </button>
       </div>
     </div>
   </div>
 </div>
+<!-- *ngFor="let border of specificCountryDetails.borders" -->

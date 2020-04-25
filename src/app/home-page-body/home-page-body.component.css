@@ -15,9 +15,8 @@
   outline: none !important;
 }
 
-.filter-region,
 select {
-  width: 10em;
+  width: 15em;
   background-color: hsl(209, 23%, 22%);
   border: none;
   border-radius: 0.5em;

@@ -1,17 +1,16 @@
 <div class="search-filtering">
   <div class="search-country">
     <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
-      placeholder="&#61442;  Search for a country..">
+      placeholder=" Search for a country..">
   </div>
-  <div class="select">
-    <select name="slct" id="slct">
-      <option>Computer Science Subjects</option>
-      <option value="1">Operating System</option>
-      <option value="2">Computer Networks</option>
-      <option value="3">Data Structure</option>
-      <option value="4">Algorithm</option>
-      <option value="5">C programming</option>
-      <option value="6">JAVA</option>
+  <div class="filter-region">
+    <select name="slct" id="slct" [(ngModel)]="searchText">
+      <option disabled='disabled' selected>Filter by Region</option>
+      <option value="Africa">Africa</option>
+      <option value="America">America</option>
+      <option value="Asia">Asia</option>
+      <option value="Europe">Europe</option>
+      <option value="Oceania">Oceania</option>
     </select>
   </div>
 </div>
@@ -19,7 +18,7 @@
 <div class="country-list-view">
   <div class="card" style="width : 220px;" *ngFor="let Country of allCountryDetails | filter : searchText ">
     <img class="card-img" style="width : 220px; height : 146px; border-radius: 0.2em;" src={{Country.flag}}
-      alt="Card image cap" />
+      alt="Country Flag" />
     <div class="card-body">
       <a routerLink="country/{{Country.name}}" class="card-title">{{Country.name}}</a>
       <p class="population">Population : {{Country.population}} </p>

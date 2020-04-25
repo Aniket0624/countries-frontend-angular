@@ -14,6 +14,11 @@
   border: none;
   color: white;
   padding: 1em 0em;
+  outline: none !important;
+}
+
+.back-button:hover {
+  background-color: hsl(209, 23%, 30%);
 }
 
 .country-details {
@@ -31,11 +36,46 @@
 .basic-details {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
-li {
-  width: 50%;
+.first-column,
+.second-column {
+  display: flex;
+  width: 45%;
+  flex-direction: column;
+}
+
+.detail {
   display: flex;
   margin-bottom: 1em;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: hsl(209, 23%, 80%);
+
+}
+
+.xx {
+  margin: 0;
+  font-size: 1em;
+  margin-left: 0.5em;
+  font-weight: lighter;
+}
+
+.border-countries {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin-top: 2em; */
+}
+
+.countries {
+  display: block;
+  /* width: 10%; */
+  margin: 0.7em;
+  height: 2em;
+  background-color: hsl(209, 23%, 22%);
+  border: none;
+  border-radius: 0.5em;
+  color: hsl(209, 23%, 80%);
+  padding: 0em 1.5em;
+  flex-wrap: wrap;
 }
