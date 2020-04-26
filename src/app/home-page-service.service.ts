@@ -18,7 +18,7 @@ export class HomePageServiceService {
     return this.http.get<any>(`https://restcountries.eu/rest/v2/all`);
   }
 
-  getIndividualCountry(countryName) {
-    return this.http.get<any>(`https://restcountries.eu/rest/v2/name/${countryName}?fullText=true`)
+  getIndividualCountry(alphaCode) {
+    return this.http.get<any>(`https://restcountries.eu/rest/v2/alpha/${alphaCode}`)
   }
 }

@@ -1,5 +1,5 @@
 <div class="country-body">
-  <button routerLink="/" class="back-button">Back</button>
+  <button (click)="back()" class="back-button">Back</button>
   <div class="country-details">
     <img class="card-img" style="width : 500px; height : 350px; border-radius: 0.2em;"
       src={{specificCountryDetails.flag}} alt="Country Flag" />
@@ -37,11 +37,11 @@
       </div>
       <div class="border-countries">
         <h4>Border Countries :</h4>
-        <button class="countries" *ngFor="let border of specificCountryDetails.borders">
+        <button class="countries" routerLink="../{{border}}" *ngFor=" let border of specificCountryDetails.borders">
           {{border}}
         </button>
       </div>
     </div>
   </div>
 </div>
-<!-- *ngFor="let border of specificCountryDetails.borders" -->
+<!-- *ngFor=" let border of specificCountryDetails.borders" -->

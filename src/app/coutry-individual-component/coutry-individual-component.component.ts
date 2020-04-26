@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HomePageServiceService } from '../home-page-service.service';
 import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-coutry-individual-component',
@@ -9,18 +10,21 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CoutryIndividualComponentComponent implements OnInit {
   public specificCountryDetails: any;
-  constructor(private _HomePageServiceService: HomePageServiceService, private route: ActivatedRoute) { }
+  constructor(private location: Location, private _HomePageServiceService: HomePageServiceService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.displaySpecificCountry(this.route.snapshot.paramMap.get('name'))
-    // console.log(this.route.snapshot.paramMap.get('name'));
+    this.route.params.subscribe(routeParams => {
+      this.displaySpecificCountry(routeParams.alphaCode);
+    });
   }
 
-  displaySpecificCountry(countryName) {
-    this._HomePageServiceService.getIndividualCountry(countryName).subscribe((response: any) => {
-      this.specificCountryDetails = response[0];
-      console.log(response[0]);
+  displaySpecificCountry(alphaCode) {
+    this._HomePageServiceService.getIndividualCountry(alphaCode).subscribe((response: any) => {
+      this.specificCountryDetails = response;
+      console.log(response);
     })
   }
-
+  back() {
+    this.location.back(); // <-- go back to previous location on cancel
+  }
 }

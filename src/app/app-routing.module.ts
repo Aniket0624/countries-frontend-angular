@@ -6,18 +6,19 @@ import { HomePageBodyComponent } from './home-page-body/home-page-body.component
 
 
 const routes: Routes = [
+  { path: 'country/country/:alphaCode', redirectTo: 'country/:alphaCode', pathMatch: 'full' },
   {
     path: "",
-    component: HomePageBodyComponent
+    component: HomePageBodyComponent,
   },
   {
-    path: "country/:name",
-    component: CoutryIndividualComponentComponent
+    path: "country/:alphaCode",
+    component: CoutryIndividualComponentComponent,
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
