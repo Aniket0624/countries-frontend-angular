@@ -6,30 +6,30 @@
       <h4> {{specificCountryDetails.name}}</h4>
       <div class="basic-details">
         <div class="first-column">
-          <li class="detail">Native Name: <p class="xx">{{specificCountryDetails.nativeName}}</p>
+          <li class="detail">Native Name: <p class="detail-depth">{{specificCountryDetails.nativeName}}</p>
           </li>
-          <li class="detail">Populations : <p class="xx">{{specificCountryDetails.population}}</p>
+          <li class="detail">Populations : <p class="detail-depth">{{specificCountryDetails.population}}</p>
           </li>
-          <li class="detail">Region : <p class="xx">{{specificCountryDetails.region}}</p>
+          <li class="detail">Region : <p class="detail-depth">{{specificCountryDetails.region}}</p>
           </li>
-          <li class="detail">Sub Region : <p class="xx">{{specificCountryDetails.subregion}}</p>
+          <li class="detail">Sub Region : <p class="detail-depth">{{specificCountryDetails.subregion}}</p>
           </li>
-          <li class="detail">Capital : <p class="xx">{{specificCountryDetails.capital}}</p>
+          <li class="detail">Capital : <p class="detail-depth">{{specificCountryDetails.capital}}</p>
           </li>
         </div>
         <div class="second-column">
-          <li class="detail">Top Level Domain : <p class="xx">{{specificCountryDetails.topLevelDomain}}</p>
+          <li class="detail">Top Level Domain : <p class="detail-depth">{{specificCountryDetails.topLevelDomain}}</p>
           </li>
 
           <li class="detail">
             Currencies :
-            <p class="xx" *ngFor="let courency of specificCountryDetails.currencies index as indexOfelement;">
+            <p class="detail-depth" *ngFor="let courency of specificCountryDetails.currencies index as indexOfelement;">
               {{indexOfelement != 0 ? ", "+ courency.code : courency.code}}</p>
           </li>
 
           <li class="detail">
             Languages :
-            <p class="xx" *ngFor="let language of specificCountryDetails.languages index as indexOfelement;">
+            <p class="detail-depth" *ngFor="let language of specificCountryDetails.languages index as indexOfelement;">
               {{indexOfelement != 0 ? ", "+language.name : language.name}}</p>
           </li>
         </div>
