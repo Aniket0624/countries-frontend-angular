@@ -37,6 +37,9 @@
       </div>
       <div class="border-countries">
         <h4>Border Countries :</h4>
+        <p style="margin: 1.35em 1.5em;" *ngIf="specificCountryDetails.borders.length == 0">
+          No Record
+        </p>
         <button class="countries" routerLink="../{{border}}" *ngFor=" let border of specificCountryDetails.borders">
           {{border}}
         </button>

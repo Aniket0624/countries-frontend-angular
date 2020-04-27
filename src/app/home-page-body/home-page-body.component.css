@@ -1,8 +1,8 @@
 .form-control {
   padding: 1em;
   border-radius: 0.5em;
-  background-color: hsl(209, 23%, 22%);
-  color: white;
+  background-color: var(--background-color-lighter);
+  color: var(--font-color);
   border: none;
   width: 30em;
   outline: none !important;
@@ -17,10 +17,10 @@
 
 select {
   width: 15em;
-  background-color: hsl(209, 23%, 22%);
+  background-color: var(--background-color-lighter);
   border: none;
   border-radius: 0.5em;
-  color: white;
+  color: var(--font-color);
   padding: 1em;
   outline: none !important;
 }
@@ -39,7 +39,7 @@ select {
 }
 
 .card {
-  background-color: hsl(209, 23%, 22%);
+  background-color: var(--background-color-lighter);
   margin-bottom: 5em;
   border-radius: 0.5em;
   outline: none !important;
@@ -48,12 +48,12 @@ select {
 
 .card-body {
   padding: 1.5em 2em;
-  color: white;
+  color: var(--font-color);
 }
 
 .card-title {
   text-decoration: none;
-  color: white;
+  color: var(--font-color);
   font-size: 1.5em;
   font-weight: 600px;
   margin-bottom: 2em;

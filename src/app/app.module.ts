@@ -8,7 +8,7 @@ import { HomePageBodyComponent } from './home-page-body/home-page-body.component
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
 import { CoutryIndividualComponentComponent } from './coutry-individual-component/coutry-individual-component.component';
-
+import { ThemeModule } from "./theme/theme.module";
 
 @NgModule({
   declarations: [
@@ -22,6 +22,7 @@ import { CoutryIndividualComponentComponent } from './coutry-individual-componen
     HttpClientModule,
     AppRoutingModule,
     Ng2SearchPipeModule,
+    ThemeModule,
     FormsModule
   ],
   providers: [],

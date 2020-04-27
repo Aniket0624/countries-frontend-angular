@@ -4,22 +4,23 @@
   justify-content: space-around;
   padding: 1.5em 7em;
   height: 40em;
-  color: white;
+  color: var(--font-color);
+  font-family: 'CustomFont';
 }
 
 .back-button {
   width: 10%;
-  background-color: hsl(209, 23%, 22%);
+  background-color: var(--background-color-lighter);
   border-radius: 0.5em;
   border: none;
-  color: white;
+  color: var(--font-color);
   padding: 1em 0em;
   outline: none !important;
 }
 
 .back-button:hover,
 .countries:hover {
-  background-color: hsl(209, 23%, 30%);
+  background-color: var(--button-hover-color);
 }
 
 .country-details {
@@ -51,7 +52,7 @@
   margin-bottom: 1em;
   font-size: 1.2em;
   font-weight: bold;
-  color: hsl(209, 23%, 80%);
+  color: var(--font-color);
 
 }
 
@@ -73,10 +74,10 @@
   /* width: 10%; */
   margin: 0.7em;
   height: 2em;
-  background-color: hsl(209, 23%, 22%);
+  background-color: var(--background-color-lighter);
   border: none;
   border-radius: 0.5em;
-  color: hsl(209, 23%, 80%);
+  color: var(--individual-country-font-color);
   padding: 0em 1.5em;
   flex-wrap: wrap;
   outline: none !important;
