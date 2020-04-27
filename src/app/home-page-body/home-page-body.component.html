@@ -16,10 +16,9 @@
 </div>
 
 <div class="country-list-view">
-  <div routerLink="country/{{Country.alpha3Code}}" class="card" style="width : 220px;"
+  <div routerLink="country/{{Country.alpha3Code}}" class="card"
     *ngFor="let Country of allCountryDetails | filter : searchText ">
-    <img class="card-img" style="width : 220px; height : 146px; border-radius: 0.2em;" src={{Country.flag}}
-      alt="Country Flag" />
+    <img class="card-img" src={{Country.flag}} alt="Country Flag" />
     <div class="card-body">
       <a class="card-title">{{Country.name}}</a>
       <p class="population">Population : {{Country.population}} </p>

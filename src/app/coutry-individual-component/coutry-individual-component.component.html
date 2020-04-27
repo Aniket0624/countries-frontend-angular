@@ -1,10 +1,9 @@
 <div class="country-body">
   <button (click)="back()" class="back-button">Back</button>
   <div class="country-details">
-    <img class="card-img" style="width : 500px; height : 350px; border-radius: 0.2em;"
-      src={{specificCountryDetails.flag}} alt="Country Flag" />
+    <img class="card-img" src={{specificCountryDetails.flag}} alt="Country Flag" />
     <div class="country-document">
-      <h4 style="font-size: 2.5em;"> {{specificCountryDetails.name}}</h4>
+      <h4> {{specificCountryDetails.name}}</h4>
       <div class="basic-details">
         <div class="first-column">
           <li class="detail">Native Name: <p class="xx">{{specificCountryDetails.nativeName}}</p>
@@ -36,7 +35,7 @@
         </div>
       </div>
       <div class="border-countries">
-        <h4>Border Countries :</h4>
+        <h4 class="border-country">Border Countries :</h4>
         <p style="margin: 1.35em 1.5em;" *ngIf="specificCountryDetails.borders.length == 0">
           No Record
         </p>

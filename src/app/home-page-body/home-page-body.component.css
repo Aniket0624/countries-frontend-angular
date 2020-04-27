@@ -13,6 +13,13 @@
   display: flex;
   justify-content: space-between;
   outline: none !important;
+  flex-wrap: wrap;
+}
+
+.card-img {
+  width: 22em;
+  height: 15em;
+  border-radius: 0.2em
 }
 
 select {
@@ -39,6 +46,7 @@ select {
 }
 
 .card {
+  width: 22em;
   background-color: var(--background-color-lighter);
   margin-bottom: 5em;
   border-radius: 0.5em;
@@ -57,4 +65,30 @@ select {
   font-size: 1.5em;
   font-weight: 600px;
   margin-bottom: 2em;
+}
+
+@media only screen and (max-width: 375px) {
+  .search-filtering {
+    padding: 1em 1em;
+  }
+
+  .form-control {
+    width: 20em;
+    margin-bottom: 2em;
+  }
+
+  .country-list-view {
+    align-self: center;
+    padding: 1em 1em;
+  }
+
+  .card-img {
+    width: 100%;
+    /* height: 10em; */
+  }
+
+  .card {
+    margin-left: 2.7em;
+    width: 80%;
+  }
 }
