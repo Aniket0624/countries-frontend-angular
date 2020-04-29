@@ -1,5 +1,7 @@
+<mat-spinner *ngIf="specificCountryDetails == null"></mat-spinner>
 <div class="country-body">
-  <button (click)="back()" class="back-button">Back</button>
+  <button mat-raised-button (click)="back()" class="back-button">Back</button>
+  <!-- <button (click)="back()" class="back-button">Back</button> -->
   <div class="country-details">
     <img class="card-img" src={{specificCountryDetails.flag}} alt="Country Flag" />
     <div class="country-document">

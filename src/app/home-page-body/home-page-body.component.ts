@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { HomePageServiceService } from 'src/app/home-page-service.service';
 
+interface Food {
+  value: string;
+  viewValue: string;
+}
+
 @Component({
   selector: 'app-home-page-body',
   templateUrl: './home-page-body.component.html',
@@ -8,6 +13,13 @@ import { HomePageServiceService } from 'src/app/home-page-service.service';
 })
 export class HomePageBodyComponent implements OnInit {
   public allCountryDetails: [];
+  foods: Food[] = [
+    { value: 'Africa', viewValue: 'Africa' },
+    { value: 'America', viewValue: 'America' },
+    { value: 'Asia', viewValue: 'Asia' },
+    { value: 'Europe', viewValue: 'Europe' },
+    { value: 'Oceania', viewValue: 'Oceania' },
+  ];
   constructor(private _HomePageServiceService: HomePageServiceService) { }
   public searchText;
   public filterText;

@@ -11,3 +11,6 @@ body {
     url("https://yoursite.com/css/fonts/CustomFont.otf") format("opentype"),
     url("https://yoursite.com/css/fonts/CustomFont.svg#filename") format("svg");
 } */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

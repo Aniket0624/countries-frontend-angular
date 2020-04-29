@@ -1,3 +1,7 @@
+.example-card {
+  max-width: 400px;
+}
+
 .form-control {
   padding: 1em;
   border-radius: 0.5em;
@@ -16,8 +20,8 @@
   flex-wrap: wrap;
 }
 
-.card-img {
-  width: 22em;
+img {
+  /* width: 100%; */
   height: 15em;
   border-radius: 0.2em
 }
@@ -59,6 +63,10 @@ select {
   color: var(--font-color);
 }
 
+.mat-form-field-wrapper {
+  padding: 0em;
+}
+
 .card-title {
   text-decoration: none;
   color: var(--font-color);
@@ -82,7 +90,7 @@ select {
     padding: 1em 1em;
   }
 
-  .card-img {
+  img {
     width: 100%;
     /* height: 10em; */
   }
