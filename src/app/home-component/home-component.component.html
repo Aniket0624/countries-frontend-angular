@@ -1,7 +1,8 @@
 <div class="home-page">
   <div class="home-header-bar">
     <h1 style="outline: 'none !important';" routerLink="/">Where in the world ?</h1>
-    <button class="btn-dark-mode" (click)="toggleTheme()">Dark Mode</button>
+    <!-- <button class="btn-dark-mode" (click)="toggleTheme()">Dark Mode</button> -->
+    <mat-slide-toggle class="toogle-dark-mode" (click)="toggleTheme()">Dark Mode</mat-slide-toggle>
   </div>
   <router-outlet></router-outlet>
 </div>

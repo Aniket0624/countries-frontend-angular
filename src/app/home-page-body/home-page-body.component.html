@@ -1,16 +1,19 @@
 <mat-spinner *ngIf="allCountryDetails.length == 0"></mat-spinner>
 <div class="search-filtering">
-  <div class="search-country">
+  <mat-form-field class="form-control">
+    <mat-label style="color: var(--font-color);"> Search for a country..</mat-label>
+    <input [(ngModel)]="searchText" matInput placeholder="Ex. India">
+  </mat-form-field>
+  <!-- <div class="search-country">
     <input class="form-control" type="text" name="search" [(ngModel)]="searchText"
       placeholder=" Search for a country..">
-  </div>
+  </div> -->
   <div class="filter-region">
-    <mat-form-field style="background-color: white; padding: 0em;">
-      <mat-label>Filter by Region</mat-label>
-      <mat-select [(ngModel)]="filterText" name="car">
-        <!-- <md-option value="" selected></md-option> -->
-        <mat-option>None</mat-option>
-        <mat-option *ngFor="let car of foods" value="{{car.value}}">
+    <mat-form-field>
+      <mat-label style="color: var(--font-color);">Filter by Region</mat-label>
+      <mat-select style="color: var(--font-color);" [(ngModel)]="filterText" name="car">
+        <mat-option class="options-back">None</mat-option>
+        <mat-option class="options-back" *ngFor="let car of foods" value="{{car.value}}">
           {{car.viewValue}}
         </mat-option>
       </mat-select>
@@ -22,7 +25,7 @@
   <mat-card class="card" routerLink="country/{{Country.alpha3Code}}"
     *ngFor="let Country of allCountryDetails | filter : searchText | filter : filterText">
     <img mat-card-image src={{Country.flag}} alt="Country Flag">
-    <mat-card-content>
+    <mat-card-content class="card-body">
       <a class="card-title">{{Country.name}}</a>
       <p class="population">Population : {{Country.population}} </p>
       <p class="region"> Region : {{Country.region}}</p>

@@ -1,15 +1,20 @@
-.example-card {
-  max-width: 400px;
-}
-
 .form-control {
-  padding: 1em;
+  /* padding: 1em; */
   border-radius: 0.5em;
-  background-color: var(--background-color-lighter);
+  /* background-color: var(--background-color-lighter); */
   color: var(--font-color);
   border: none;
   width: 30em;
   outline: none !important;
+}
+
+.options-back {
+  background-color: var(--background-color-lighter);
+  color: var(--font-color);
+}
+
+.options-back:hover {
+  background-color: var(--button-hover-color);
 }
 
 .search-filtering {
@@ -59,7 +64,7 @@ select {
 }
 
 .card-body {
-  padding: 1.5em 2em;
+  /* padding: 1.5em 2em; */
   color: var(--font-color);
 }
 
@@ -81,7 +86,7 @@ select {
   }
 
   .form-control {
-    width: 20em;
+    width: 100%;
     margin-bottom: 2em;
   }
 
@@ -90,13 +95,9 @@ select {
     padding: 1em 1em;
   }
 
-  img {
-    width: 100%;
-    /* height: 10em; */
-  }
 
   .card {
-    margin-left: 2.7em;
+    margin: 2em auto;
     width: 80%;
   }
 }

@@ -33,6 +33,7 @@ export class HomePageBodyComponent implements OnInit {
       this.allCountryDetails = response;
       // console.log(response);
 
+
     })
   }
 }

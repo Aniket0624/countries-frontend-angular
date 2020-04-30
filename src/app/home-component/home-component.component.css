@@ -15,10 +15,8 @@
   color: var(--font-color);
 }
 
-.btn-dark-mode {
-  background: transparent;
-  border: none;
-  outline: none !important;
+.toogle-dark-mode {
+  align-self: center;
   color: var(--font-color);
 }
 
