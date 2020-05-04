@@ -1,25 +1,44 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed, inject } from '@angular/core/testing';
+import { HttpEvent, HttpEventType } from '@angular/common/http';
+
+import {
+  HttpClientTestingModule,
+  HttpTestingController
+} from '@angular/common/http/testing';
 
 import { HomePageBodyComponent } from './home-page-body.component';
+import { HomePageServiceService } from 'src/app/home-page-service.service';
 
-describe('HomePageBodyComponent', () => {
-  let component: HomePageBodyComponent;
-  let fixture: ComponentFixture<HomePageBodyComponent>;
-
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ HomePageBodyComponent ]
-    })
-    .compileComponents();
-  }));
-
+describe('DataService', () => {
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomePageBodyComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      providers: [HomePageServiceService]
+    });
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  it(
+    'should get all country details',
+    inject(
+      [HttpTestingController, HomePageServiceService],
+      (httpMock: HttpTestingController, dataService: HomePageServiceService, _HomePageBodyComponent: HomePageBodyComponent) => {
+        const mockResponceLength = 250;
+
+        dataService.getAllCountriesDetails().subscribe((event: HttpEvent<any>) => {
+          switch (event.type) {
+            case HttpEventType.Response:
+              expect(event.body).toEqual(mockResponceLength);
+          }
+        });
+
+        const mockReq = httpMock.expectOne(dataService.mockAllURL);
+
+        expect(mockReq.cancelled).toBeFalsy();
+        expect(mockReq.request.responseType).toEqual('json');
+        // expect(mockReq).toEqual(_HomePageBodyComponent.allCountryDetails);
+        // mockReq.flush(_HomePageBodyComponent.allCountryDetails);
+        httpMock.verify();
+      }
+    )
+  );
 });

@@ -12,8 +12,9 @@
     <mat-form-field>
       <mat-label style="color: var(--font-color);">Filter by Region</mat-label>
       <mat-select style="color: var(--font-color);" [(ngModel)]="filterText" name="car">
-        <mat-option class="options-back">None</mat-option>
-        <mat-option class="options-back" *ngFor="let car of foods" value="{{car.value}}">
+        <mat-option style="color: var(--font-color);" class="options-back">None</mat-option>
+        <mat-option style="color: var(--font-color);" class="options-back" *ngFor="let car of foods"
+          value="{{car.value}}">
           {{car.viewValue}}
         </mat-option>
       </mat-select>

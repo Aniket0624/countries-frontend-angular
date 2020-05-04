@@ -32,7 +32,7 @@ export class HomePageBodyComponent implements OnInit {
     this._HomePageServiceService.getAllCountriesDetails().subscribe((response: any) => {
       this.allCountryDetails = response;
       // console.log(response);
-
+      console.log(response.length);
 
     })
   }

@@ -23,6 +23,7 @@ export class CoutryIndividualComponentComponent implements OnInit {
     this._HomePageServiceService.getIndividualCountry(alphaCode).subscribe((response: any) => {
       this.specificCountryDetails = response;
       console.log(response);
+      return response;
     })
   }
   back() {

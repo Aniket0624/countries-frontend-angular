@@ -12,6 +12,8 @@ export class HomePageServiceService {
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
+  public mockAllURL = "https://restcountries.eu/rest/v2/all";
+  public mockIndividualURL = "https://restcountries.eu/rest/v2/alpha/AFG"
   constructor(private http: HttpClient) { }
 
   getAllCountriesDetails(): Observable<any> {

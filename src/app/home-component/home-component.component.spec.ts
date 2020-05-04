@@ -8,9 +8,9 @@ describe('HomeComponentComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeComponentComponent ]
+      declarations: [HomeComponentComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +19,7 @@ describe('HomeComponentComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create base of the productx', () => {
     expect(component).toBeTruthy();
   });
 });
